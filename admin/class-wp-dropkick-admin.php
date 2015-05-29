@@ -52,7 +52,8 @@ class Wp_Dropkick_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
-    add_action( 'admin_menu', array('Wp_Dropkick_Admin', 'wp_dropkick_admin_menu') );
+    add_action( 'admin_menu', array($this, 'wp_dropkick_admin_menu') );
+    add_action( 'admin_init', array($this, 'wp_dropkick_settings') );
 
 	}
 
@@ -63,6 +64,23 @@ class Wp_Dropkick_Admin {
 
   public static function wp_dropkick_setting_page() {
     include 'partials/wp-dropkick-admin-display.php';
+  }
+
+  public static function wp_dropkick_settings() {
+    //register our settings
+    register_setting( 'wp_dropkick_settings', 'dropkick_jquery_selectors');
+    register_setting( 'wp_dropkick_settings', 'dropkick_mobile_device_support');
+    register_setting( 'wp_dropkick_settings', 'dropkick_ie8_support');
+  }
+
+  public static function wp_dropkick_settings_data() {
+    $data = array();
+
+    $data['selectors']         = esc_attr( get_option('dropkick_jquery_selectors') );
+    $data['mobile_support']    = esc_attr( get_option('dropkick_mobile_device_support') );
+    $data['ie8_support']              = esc_attr( get_option('dropkick_ie8_support') );
+
+    return $data;
   }
 
 	/**

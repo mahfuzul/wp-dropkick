@@ -52,6 +52,9 @@ class Wp_Dropkick_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		add_action( 'wp_enqueue_scripts', array($this, 'enqueue_scripts') );
+		add_action( 'wp_footer', array($this, 'wp_dorpkick_js') );
+
 	}
 
 	/**
@@ -96,7 +99,40 @@ class Wp_Dropkick_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-dropkick-public.js', array( 'jquery' ), $this->version, false );
+		$selectors     		= esc_attr( get_option('dropkick_jquery_selectors') );
+		$mobile_support		= esc_attr( get_option('dropkick_mobile_device_support') );
+		// $ie8_support   		= esc_attr( get_option('dropkick_ie8_support') );
+		$ui_theme      		= 'default';
+
+		//
+		if ($ui_theme == 'default') {
+			wp_enqueue_style( $this->plugin_name, WP_DROPKICK_URL . 'DropKick/css/dropkick.css', array(), $this->version, 'all' );
+		}
+		else {
+			wp_enqueue_style( $this->plugin_name, WP_DROPKICK_URL . 'DropKick/css/dropkick-classic.css', array(), $this->version, 'all' );
+		}
+
+		// Add dropkick.js
+		wp_enqueue_script( $this->plugin_name, WP_DROPKICK_URL . 'DropKick/dropkick.js', array( 'jquery' ), $this->version, false );
+
+		// if ($ie8_polyfill) {
+		//   wp_enqueue_script( $this->plugin_name, WP_DROPKICK_URL . 'DropKick/js/ie8-polyfill.js', array( 'jquery' ), $this->version, false );
+		// }
+
+		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-dropkick-public.js', array( 'jquery' ), $this->version, false );
+
+	}
+
+	public function wp_dorpkick_js() {
+		$data = Wp_Dropkick_Admin::wp_dropkick_settings_data();
+
+		$js = '';
+
+		$js = '<script>';
+		$js .= '$(function($) { $( "'. $data['selectors'] .'" ).dropkick({ mobile: true }); })( jQuery );';
+		$js .= '</script>';
+
+		echo $js;
 
 	}
 
