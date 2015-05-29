@@ -52,7 +52,18 @@ class Wp_Dropkick_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+    add_action( 'admin_menu', array('Wp_Dropkick_Admin', 'wp_dropkick_admin_menu') );
+
 	}
+
+  public function wp_dropkick_admin_menu() {
+    //create new top-level menu
+    add_menu_page('WP DropKick', 'WP DropKick', 'administrator', 'wp-dropkick', array('Wp_Dropkick_Admin', 'wp_dropkick_setting_page'),'');
+  }
+
+  public function wp_dropkick_setting_page() {
+    include 'partials/wp-dropkick-admin-display.php';
+  }
 
 	/**
 	 * Register the stylesheets for the admin area.

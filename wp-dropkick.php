@@ -73,3 +73,6 @@ function run_wp_dropkick() {
 
 }
 run_wp_dropkick();
+
+define( 'WP_DROPKICK_URL',        plugin_dir_url( __FILE__ ) );
+define( 'WP_DROPKICK_PATH',       dirname( __FILE__ ) . '/' );
