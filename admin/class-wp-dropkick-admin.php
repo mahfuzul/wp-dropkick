@@ -56,12 +56,12 @@ class Wp_Dropkick_Admin {
 
 	}
 
-  public function wp_dropkick_admin_menu() {
+  public static function wp_dropkick_admin_menu() {
     //create new top-level menu
     add_menu_page('WP DropKick', 'WP DropKick', 'administrator', 'wp-dropkick', array('Wp_Dropkick_Admin', 'wp_dropkick_setting_page'),'');
   }
 
-  public function wp_dropkick_setting_page() {
+  public static function wp_dropkick_setting_page() {
     include 'partials/wp-dropkick-admin-display.php';
   }
 
