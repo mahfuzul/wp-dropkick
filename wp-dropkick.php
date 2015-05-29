@@ -15,10 +15,10 @@
  * @wordpress-plugin
  * Plugin Name:       WP dropkick
  * Plugin URI:        http://www.wordpress.org
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Integrates <a href="http://robdel12.github.io/DropKick/">Dropkick</a> with WordPress.
  * Version:           1.0.0
- * Author:            Mahfuzul Hasan
- * Author URI:        http://mahfuzulhasan.com
+ * Author:            Mahfuzul Hasan, Faysal Mahamud
+ * Author URI:        http://mahfuzulhasan.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-dropkick
