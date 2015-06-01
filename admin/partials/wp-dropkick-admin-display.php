@@ -54,5 +54,5 @@
 
 </form>
 
-<?php print_r( Wp_Dropkick_Admin::wp_dropkick_settings_data() ); ?>
+<?php //print_r( Wp_Dropkick_Admin::wp_dropkick_settings_data() ); ?>
 </div>
