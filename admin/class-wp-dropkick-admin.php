@@ -78,7 +78,7 @@ class Wp_Dropkick_Admin {
 
     $data['selectors']         = esc_attr( get_option('dropkick_jquery_selectors') );
     $data['mobile_support']    = esc_attr( get_option('dropkick_mobile_device_support') );
-    $data['ie8_support']              = esc_attr( get_option('dropkick_ie8_support') );
+    $data['ie8_support']       = esc_attr( get_option('dropkick_ie8_support') );
 
     return $data;
   }
