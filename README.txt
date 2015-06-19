@@ -1,6 +1,5 @@
 === Plugin Name ===
 Contributors: mahfuzul, faysalturjo
-Donate link: http://mahfuzulhasan.com
 Tags: dropkick, dropdown
 Requires at least: 3.9
 Tested up to: 4.2.2
