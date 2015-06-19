@@ -14,8 +14,8 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WP dropkick
- * Plugin URI:        http://www.wordpress.org
- * Description:       Integrates <a href="http://robdel12.github.io/DropKick/">Dropkick</a> with WordPress. Developed by <a href="http://mahfuzulhasan.com/" target="_blank">Mahfuzul Hasan</a>,<a href="http://fmturjo.wordpress.com/" target="_blank"> Faysal Mahamud</a>.
+ * Plugin URI:        https://wordpress.org/plugins/wp-dropkick/
+ * Description:       Integrates <a href="http://robdel12.github.io/DropKick/">Dropkick</a> with WordPress. Developed by <a href="http://mahfuzulhasan.com/" target="_blank">Mahfuzul Hasan</a>, <a href="http://fmturjo.wordpress.com/" target="_blank">Faysal Mahamud</a>.
  * Version:           1.0.0
  * Author:            Mahfuzul Hasan
  * Author URI:        http://mahfuzulhasan.com/

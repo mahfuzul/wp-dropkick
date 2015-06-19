@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: mahfuzul, faysalturjo
 Donate link: http://mahfuzulhasan.com
 Tags: dropkick, dropdown
 Requires at least: 3.9
@@ -25,11 +25,14 @@ Nothing yet
 
 == Screenshots ==
 
-1. screenshot-1
-2. screenshot-2
-3. screenshot-3
+1. screenshot-1.png
+2. screenshot-2.png
+3. screenshot-3.png
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial release
+
+== Upgrade Notice ==
+Nothing yet
